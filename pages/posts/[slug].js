@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
   const paths = posts
     .map((post) => {
-      const slug = post.fields.slug;
+      const slug = post?.fields?.slug;
       if (!slug) {
         console.error(`Post with id ${post.sys.id} does not have a slug`);
       }
