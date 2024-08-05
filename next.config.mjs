@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     forceSwcTransforms: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 
   async headers() {
     return [

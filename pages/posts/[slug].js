@@ -2,7 +2,6 @@
 
 import { useRouter } from "next/router";
 import { getPostBySlug, getAllPosts } from "../../lib/contentful";
-import dayjs from "dayjs";
 import Image from "next/image";
 import { ContentfulLivePreview } from "@contentful/live-preview";
 import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
@@ -14,7 +13,7 @@ export async function getStaticPaths() {
 
   const paths = posts
     .map((post) => {
-      const slug = post?.fields?.slug;
+      const slug = post.fields.slug;
       if (!slug) {
         console.error(`Post with id ${post.sys.id} does not have a slug`);
       }
