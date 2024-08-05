@@ -3,6 +3,7 @@ import {
   ContentfulLivePreviewProvider,
   initLivePreview,
 } from "@contentful/live-preview/react";
+import "@/app/globals.css"; // Ensure this is imported
 
 function MyApp({ Component, pageProps }) {
   return (

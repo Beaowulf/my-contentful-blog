@@ -57,33 +57,34 @@ const Post = ({ post, preview }) => {
   //   const image = livePost.fields.blogImage;
 
   return (
-    <div className="bg-color-red">
-      {preview && <div className="preview-banner">Preview Mode</div>}
-      <h1
-        {...ContentfulLivePreview.getProps({
-          entryId: post.sys.id,
-          fieldId: "blogTitle",
-        })}
-      >
-        {title}
-      </h1>
-      <p
-        {...ContentfulLivePreview.getProps({
-          entryId: post.sys.id,
-          fieldId: "blogDescription",
-        })}
-      >
-        {excerpt}
-      </p>
-      <div
-        {...ContentfulLivePreview.getProps({
-          entryId: post.sys.id,
-          fieldId: "blogRichTextParagraph",
-        })}
-      >
-        {documentToReactComponents(paragraph)}
-      </div>
-      {/* {image && (
+    <div className="w-screen h-screen bg-red-300 redbg">
+      <div>
+        {preview && <div className="preview-banner">Preview Mode</div>}
+        <h1
+          {...ContentfulLivePreview.getProps({
+            entryId: post.sys.id,
+            fieldId: "blogTitle",
+          })}
+        >
+          {title}
+        </h1>
+        <p
+          {...ContentfulLivePreview.getProps({
+            entryId: post.sys.id,
+            fieldId: "blogDescription",
+          })}
+        >
+          {excerpt}
+        </p>
+        <div
+          {...ContentfulLivePreview.getProps({
+            entryId: post.sys.id,
+            fieldId: "blogRichTextParagraph",
+          })}
+        >
+          {documentToReactComponents(paragraph)}
+        </div>
+        {/* {image && (
         <Image
           {...ContentfulLivePreview.getProps({ entryId: post.sys.id, fieldId: 'blogImage' })}
           src={image.fields.file.url}
@@ -92,6 +93,7 @@ const Post = ({ post, preview }) => {
           height={image.fields.file.details.image.height}
         />
       )} */}
+      </div>
     </div>
   );
 };
