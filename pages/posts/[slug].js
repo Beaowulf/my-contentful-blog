@@ -9,7 +9,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
-  console.log(posts); // Log the posts to see if slug exists
 
   const paths = posts
     .map((post) => {

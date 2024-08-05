@@ -6,7 +6,6 @@ import { getAllPosts } from "../../lib/contentful";
 export async function getStaticProps() {
   const posts = await getAllPosts();
 
-  console.log(posts);
   return {
     props: {
       posts,
