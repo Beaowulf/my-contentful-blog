@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
   const paths = posts
     .map((post) => {
-      const slug = post.fields.slug;
+      const slug = post?.fields?.slug;
       if (!slug) {
         console.error(`Post with id ${post.sys.id} does not have a slug`);
       }
@@ -50,11 +50,10 @@ const Post = ({ post, preview }) => {
 
   const livePost = useContentfulLiveUpdates(post);
 
-  const date = livePost.fields.date;
   const title = livePost.fields.blogTitle;
   const excerpt = livePost.fields.blogDescription;
   const paragraph = livePost.fields.blogRichTextParagraph;
-  //   const image = livePost.fields.blogImage;
+  // const image = livePost.fields.blogImage;
 
   return (
     <div className="w-screen h-screen bg-red-300 redbg">
