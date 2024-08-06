@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { getAllPosts } from "../../lib/contentful";
+import Navbar from "@/ui/navbar";
 
 export async function getStaticProps() {
   const posts = await getAllPosts();

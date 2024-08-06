@@ -1,0 +1,13 @@
+/* This is for the container below the video player and text with pill */
+
+.introTextBtnContainer {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #48427b 20%, #3236978f 80%),
+    url("../../public/assets/bg_image_introTextBtn.png") no-repeat center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  border-radius: 20px;
+}
