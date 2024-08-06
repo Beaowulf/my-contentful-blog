@@ -33,7 +33,6 @@ body {
 }
 
 .backgroundColor {
-  position: relative;
   background: rgb(27, 21, 59);
   background: linear-gradient(
     137deg,
@@ -41,9 +40,109 @@ body {
     #1c2943 49.48%,
     #301e3e 88.79%
   );
-  overflow: hidden;
 }
 
 .pagePaddingLarge {
-  @apply px-4 sm:px-6 md:px-[8%] lg:px-[10%] xl:px-[11%] 2xl:px-[13%];
+  @apply px-10;
+}
+
+#__next {
+  background: rgb(27, 21, 59);
+  background: linear-gradient(
+    137deg,
+    #1b153c 11.09%,
+    #1c2943 49.48%,
+    #301e3e 88.79%
+  );
+  /* hacky way to have contentful stretch all the way down */
+  height: 250rem;
+}
+
+.unlockPotentialTypography {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 53.3px */
+}
+
+.introTextBtnContainer {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #48427b 20%, #3236978f 80%),
+    url("../public/assets/bg_image_introTextBtn.png") no-repeat center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  border-radius: 20px;
+}
+
+.parentColoredBorderWrapper {
+  /* Border Radius */
+  padding: 2px;
+  /* Border Radius */
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(93, 71, 255, 0.56);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(175, 175, 255, 1) 0%,
+    rgba(255, 143, 184, 1) 50%,
+    rgba(255, 187, 155, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(175, 175, 255, 1) 0%,
+    rgba(255, 143, 184, 1) 50%,
+    rgba(255, 187, 155, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(175, 175, 255, 1) 0%,
+    rgba(255, 143, 184, 1) 50%,
+    rgba(255, 187, 155, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#afafff",endColorstr="#ffbb9b",GradientType=1);
+}
+
+.gradientBorderParrent {
+  position: relative;
+  border-radius: 25px;
+  padding: 1px;
+  overflow: hidden;
+}
+
+.gradientBorderParrent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.2px;
+  border-radius: 25px;
+  background: linear-gradient(
+    0deg,
+    rgba(175, 175, 255, 1) 0%,
+    rgba(255, 143, 184, 1) 50%,
+    rgba(255, 187, 155, 1) 100%
+  );
+  -webkit-mask: linear-gradient(
+    0deg,
+    rgba(175, 175, 255, 1) 0%,
+    rgba(255, 143, 184, 1) 50%,
+    rgba(255, 187, 155, 1) 100%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+}
+
+.gradientBorderChild {
+  border-radius: 23px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }

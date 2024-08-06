@@ -18,11 +18,11 @@ const UnlockPotentialContainer = ({ hasMarginTop = true }) => {
   return (
     <div
       className={`hidden md:block parentColoredBorderWrapper ${
-        hasMarginTop ? "mt-40" : "mt-0"
+        hasMarginTop ? "mt-20" : "mt-0"
       }`}
     >
       <div className="introTextBtnContainer">
-        <div className="flex items-center flex-col lg:flex-row gap-8 lg:gap-0 justify-between lg:px-12 lg:py-8 px-6 py-4 w-full">
+        <div className="flex items-center flex-col lg:flex-row gap-4 lg:gap-0 justify-between lg:px-6 lg:py-4 px-3 py-2 w-full">
           <h5 className="md:text-[20px] 2xl:text-[25px] unlockPotentialTypography">
             Unlock the full potential of your capital
           </h5>

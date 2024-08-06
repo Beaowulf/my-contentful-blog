@@ -1,5 +1,3 @@
-// pages/posts/[slug].js
-
 import { useRouter } from "next/router";
 import { getPostBySlug, getAllPosts } from "../../lib/contentful";
 import Image from "next/image";
@@ -7,7 +5,6 @@ import Link from "next/link";
 import RichTextRenderer from "@/components/richTetxtRenderer";
 import { ContentfulLivePreview } from "@contentful/live-preview";
 import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import ShareButton from "@/components/shareButton";
 import blogPostBG from "@/public/assets/blogPostBG.jpg";
 import DynamicPurpleBar from "@/components/dynamicPurpleBar";
@@ -76,7 +73,7 @@ const Post = ({ post, preview }) => {
   const title = livePost.fields.blogTitle;
   const excerpt = livePost.fields.blogDescription;
   const paragraph = livePost.fields.blogRichTextParagraph;
-  // const image = livePost.fields.blogImage;
+  const blogTakeaways = livePost.fields.blogTakeaways || [];
 
   function countWords(str) {
     return str.split(/\s+/).filter((word) => word !== "").length;
@@ -100,7 +97,7 @@ const Post = ({ post, preview }) => {
                 {title}
               </h1>
 
-              {/* writteb by - icons - share article  */}
+              {/* written by - icons - share article  */}
               <div className="w-full flex md:flex-row flex-col justify-between items-center gap-4 text-[#F6F6F6]">
                 <div>
                   <p className="text-[#F6F6F6]">Written By Joe Smith</p>
@@ -183,8 +180,8 @@ const Post = ({ post, preview }) => {
 
               <div className="blogPostWrapper mt-10">
                 <RichTextRenderer
-                  blogTakeaways={livePost.fields.blogTakeaways}
-                  hasTakeaways={livePost?.fields?.length > 0}
+                  blogTakeaways={blogTakeaways}
+                  hasTakeaways={blogTakeaways.length > 0}
                   richTextDocument={paragraph}
                 />
               </div>
@@ -202,7 +199,7 @@ const Post = ({ post, preview }) => {
 
           <div className="hidden md:block md:w-3/12">
             <div className="flex flex-col gap-10">
-              <div className="bg-white p-4 md:p-10 rounded-[20px]">
+              <div className="bg-white p-2 md:p-5 rounded-[20px]">
                 <p className="font-bold leading-6 uppercase text-[18px] text-[#252948]">
                   Table of contents
                 </p>

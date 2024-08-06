@@ -18,7 +18,7 @@ const CryptoPreviewTables = () => {
   return (
     <div className="flex flex-col gap-10">
       {/* 1 box */}
-      <div className="bg-white rounded-[30px] px-4 pb-1 pt-4 md:px-8 md:pb-2 md:pt-8 max-w-[340px]">
+      <div className="bg-white rounded-[30px] px-2 pb-1 pt-2 md:px-4 md:pb-2 md:pt-4 max-w-[340px]">
         <div className="flex flex-row items-center justify-start gap-3">
           <h4 className="text-black mb-[10px] font-bold">Avalanche</h4>
           <Image
@@ -77,7 +77,7 @@ const CryptoPreviewTables = () => {
         </div>
       </div>
       {/* 1 box */}
-      <div className="bg-white rounded-[30px] px-4 pb-1 pt-4 md:px-8 md:pb-2 md:pt-8 max-w-[340px]">
+      <div className="bg-white rounded-[30px] px-2 pb-1 pt-2 md:px-4 md:pb-2 md:pt-4 max-w-[340px]">
         <div className="flex flex-row items-center justify-start gap-3">
           <h4 className="text-black mb-[10px] font-bold">Arbitrum</h4>
           <Image
