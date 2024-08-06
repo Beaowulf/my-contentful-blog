@@ -146,3 +146,7 @@ body {
   position: relative;
   z-index: 1;
 }
+
+.rich-text-white {
+  color: #f6f6f6;
+}
