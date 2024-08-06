@@ -55,7 +55,7 @@ body {
     #301e3e 88.79%
   );
   /* hacky way to have contentful stretch all the way down */
-  height: 250rem;
+  height: fit-content;
 }
 
 .unlockPotentialTypography {

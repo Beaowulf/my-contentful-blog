@@ -33,7 +33,7 @@ const RichTextRenderer = ({
                     {blogTakeaways.map((takeaway, index) => (
                       <li
                         key={index}
-                        className="mb-8 text-[18px]  text-[#F6F6F6]"
+                        className="mb-8 text-[18px] text-[#F6F6F6]"
                       >
                         {" "}
                         <span>•</span> {takeaway}
@@ -60,6 +60,7 @@ const RichTextRenderer = ({
           <div className="my-4 blogStyling text-[#F6F6F6]">{children}</div>
         );
       },
+
       [BLOCKS.UL_LIST]: (node, children) => (
         <ul className="list-disc list-inside list_inline">{children}</ul>
       ),
@@ -69,6 +70,16 @@ const RichTextRenderer = ({
       [BLOCKS.LIST_ITEM]: (node, children) => (
         <li className="my-2 list_inline">{children}</li>
       ),
+      [BLOCKS.HEADING_1]: (node, children) => {
+        return <h1 className="text-3xl font-bold my-4">{children}</h1>;
+      },
+      [BLOCKS.HEADING_2]: (node, children) => {
+        return <h2 className="text-2xl font-bold my-4">{children}</h2>;
+      },
+      [BLOCKS.HEADING_3]: (node, children) => {
+        return <h3 className="text-xl font-bold my-4">{children}</h3>;
+      },
+
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const { file, title } = node.data.target.fields;
         const { url, details } = file;

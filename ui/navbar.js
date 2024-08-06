@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="text-center">
                   <Link
                     href="/blogs"
-                    className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 rounded-md md:text-[16px] text-[14px] font-medium"
+                    className="text-[#F6F6F6] rounded-md md:text-[16px] text-[14px] font-medium"
                   >
                     Burd Log
                   </Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <div className="text-center">
                   <Link
                     href="/ourStory"
-                    className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 rounded-md md:text-[16px] text-[14px] font-medium"
+                    className="text-[#F6F6F6] rounded-md md:text-[16px] text-[14px] font-medium"
                   >
                     Our Story
                   </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <div className="text-center">
                   <Link
                     href="/strategies"
-                    className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 rounded-md md:text-[16px] text-[14px] font-medium"
+                    className="text-[#F6F6F6] rounded-md md:text-[16px] text-[14px] font-medium"
                   >
                     Strategies
                   </Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
                 <div className="text-center">
                   <Link
                     href="/contactUs"
-                    className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 rounded-md md:text-[16px] text-[14px] font-medium"
+                    className="text-[#F6F6F6] rounded-md md:text-[16px] text-[14px] font-medium"
                   >
                     Contact Us
                   </Link>

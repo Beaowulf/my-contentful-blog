@@ -66,6 +66,8 @@ const Post = ({ post, preview }) => {
     });
   }
 
+  console.log(post);
+
   const blogUrl = typeof window !== "undefined" ? window.location.href : "";
 
   const livePost = useContentfulLiveUpdates(post);
@@ -73,6 +75,9 @@ const Post = ({ post, preview }) => {
   const title = livePost.fields.blogTitle;
   const excerpt = livePost.fields.blogDescription;
   const paragraph = livePost.fields.blogRichTextParagraph;
+  const blogAuthor = livePost.fields.blogAuthor;
+  const createtAt = livePost.fields.blogImage.sys.createdAt;
+  const locale = livePost.fields.blogImage.sys.locale;
   const blogTakeaways = livePost.fields.blogTakeaways || [];
 
   function countWords(str) {
@@ -85,7 +90,7 @@ const Post = ({ post, preview }) => {
   return (
     <div className="  ">
       <Navbar />
-      <div className="w-screen h-screen pagePaddingLarge mt-10">
+      <div className=" pagePaddingLarge mt-10">
         <DynamicPurpleBar inBlogPost={true} blogTitle={title} />
 
         <div className="flex flex-col lg:flex-row gap-10 mt-20">
@@ -100,7 +105,7 @@ const Post = ({ post, preview }) => {
               {/* written by - icons - share article  */}
               <div className="w-full flex md:flex-row flex-col justify-between items-center gap-4 text-[#F6F6F6]">
                 <div>
-                  <p className="text-[#F6F6F6]">Written By Joe Smith</p>
+                  <p className="text-[#F6F6F6]">Written By {blogAuthor}</p>
                 </div>
 
                 <div className="flex justify-center items-center gap-4">
@@ -113,10 +118,7 @@ const Post = ({ post, preview }) => {
                   <div className="flex gap-2">
                     <Image src={calendarIcon} alt="calendar_Icon" />
                     <p className="text-nowrap text-[#F6F6F6]">
-                      {formatDateString(
-                        livePost.fields.createdAt,
-                        livePost.fields.locale
-                      )}
+                      {formatDateString(createtAt, locale)}
                     </p>
                   </div>
                   <div className="flex gap-2">
