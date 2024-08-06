@@ -1,0 +1,90 @@
+/* Header */
+.toggle_wrapper {
+  width: 60px;
+  height: 32px;
+  background-color: #e0e1ff;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.4s ease;
+  margin-right: 10px;
+}
+
+.toggle_wrapper.night {
+  background-color: #383780;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 2px;
+  left: 0; /* Start from the left */
+  background-size: cover;
+  transition: left 0.4s ease, opacity 0.4s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.sun {
+  background-color: white;
+  border-radius: 50px;
+  background-image: url("../public/assets/sun.svg");
+  opacity: 1;
+}
+
+.moon {
+  border-radius: 50px;
+  background-color: #9a89fb;
+  background-image: url("../public/assets/moon.svg");
+  opacity: 0;
+  left: -100%; /* Start from the right, out of view */
+  background-position-y: 1.2px;
+  background-position-x: 1px;
+}
+/* Global styles or specific CSS file */
+
+/* For the hamburger menu icon animation */
+.menu-icon {
+  transition: transform 0.3s ease;
+}
+
+.menu-icon.open {
+  transform: rotate(90deg);
+}
+
+/* Fullscreen menu overlay */
+.fullscreen-menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: rgb(166, 158, 183); /* Dark semi-transparent background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other elements */
+  transform: translateX(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fullscreen-menu.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fullscreen-menu a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-decoration: none;
+}
+
+.fullscreen-menu .close-button {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}

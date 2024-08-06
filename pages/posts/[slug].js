@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ContentfulLivePreview } from "@contentful/live-preview";
 import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import "./index.css";
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
@@ -54,7 +55,7 @@ const Post = ({ post, preview }) => {
   // const image = livePost.fields.blogImage;
 
   return (
-    <div className="w-screen h-screen bg-red-300 redbg">
+    <div className="w-screen h-screen bg-slate-500 pagePaddingLarge">
       <div>
         {preview && <div className="preview-banner">Preview Mode</div>}
         <h1

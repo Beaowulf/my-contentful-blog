@@ -1,0 +1,65 @@
+.navBarButtonBGDark {
+  padding: 2px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 54px;
+  background: linear-gradient(
+    130deg,
+    rgba(255, 187, 155, 1) 25%,
+    rgba(255, 143, 184, 1) 35%,
+    rgba(175, 175, 255, 1) 45%
+  );
+  box-shadow: 0 8.52px 27.7px rgba(82, 0, 255, 0.4),
+    0 2.13px 6.39px rgba(51, 0, 255, 0.7);
+  background-size: 100% 200%;
+  transition: all 0.5s ease;
+}
+.mainButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-transform: uppercase;
+  z-index: 1;
+  background: rgb(175, 175, 255);
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(255, 178, 161, 1) 10%,
+    rgba(255, 143, 184, 1) 60%,
+    rgba(211, 160, 223, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(255, 178, 161, 1) 10%,
+    rgba(255, 143, 184, 1) 60%,
+    rgba(211, 160, 223, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    180deg,
+    rgba(255, 178, 161, 1) 10%,
+    rgba(255, 143, 184, 1) 60%,
+    rgba(211, 160, 223, 1) 100%
+  );
+  background: -o-linear-gradient(
+    180deg,
+    rgba(255, 178, 161, 1) 10%,
+    rgba(255, 143, 184, 1) 60%,
+    rgba(211, 160, 223, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 178, 161, 1) 10%,
+    rgba(255, 143, 184, 1) 60%,
+    rgba(211, 160, 223, 1) 100%
+  );
+  transition: all 0.2s ease;
+}

@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+.backgroundColor {
+  position: relative;
+  background: rgb(27, 21, 59);
+  background: linear-gradient(
+    137deg,
+    #1b153c 11.09%,
+    #1c2943 49.48%,
+    #301e3e 88.79%
+  );
+  overflow: hidden;
+}
+
+.pagePaddingLarge {
+  @apply px-4 sm:px-6 md:px-[8%] lg:px-[10%] xl:px-[11%] 2xl:px-[13%];
+}
