@@ -66,8 +66,6 @@ const Post = ({ post, preview }) => {
     });
   }
 
-  console.log(post);
-
   const blogUrl = typeof window !== "undefined" ? window.location.href : "";
 
   const livePost = useContentfulLiveUpdates(post);
