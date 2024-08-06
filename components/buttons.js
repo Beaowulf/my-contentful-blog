@@ -75,7 +75,7 @@ export function AboutButtonDarkBG({
     <>
       <button className={customClass} onClick={onClick}>
         <div className="aboutButtonDarkBG">
-          <p className="buttonLightModeText min-w-fit">{label}</p>
+          <p className="text-[#feeef4] text-[12px] min-w-fit">{label}</p>
           {hasArrowRight && (
             <Image
               className={"size-5"}

@@ -62,22 +62,32 @@ const RichTextRenderer = ({
       },
 
       [BLOCKS.UL_LIST]: (node, children) => (
-        <ul className="list-disc list-inside list_inline">{children}</ul>
+        <ul className="list-disc list-inside list_inline text-[#F6F6F6]">
+          {children}
+        </ul>
       ),
       [BLOCKS.OL_LIST]: (node, children) => (
-        <ol className="list-decimal list-inside list_inline">{children}</ol>
+        <ol className="list-decimal list-inside list_inline text-[#F6F6F6]">
+          {children}
+        </ol>
       ),
       [BLOCKS.LIST_ITEM]: (node, children) => (
-        <li className="my-2 list_inline">{children}</li>
+        <li className="my-2 list_inline text-[#F6F6F6]">{children}</li>
       ),
       [BLOCKS.HEADING_1]: (node, children) => {
-        return <h1 className="text-3xl font-bold my-4">{children}</h1>;
+        return (
+          <h1 className="text-3xl font-bold my-4 text-[#F6F6F6]">{children}</h1>
+        );
       },
       [BLOCKS.HEADING_2]: (node, children) => {
-        return <h2 className="text-2xl font-bold my-4">{children}</h2>;
+        return (
+          <h2 className="text-2xl font-bold my-4 text-[#F6F6F6]">{children}</h2>
+        );
       },
       [BLOCKS.HEADING_3]: (node, children) => {
-        return <h3 className="text-xl font-bold my-4">{children}</h3>;
+        return (
+          <h3 className="text-xl font-bold my-4 text-[#F6F6F6]">{children}</h3>
+        );
       },
 
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
@@ -104,7 +114,11 @@ const RichTextRenderer = ({
     },
   };
 
-  return <>{documentToReactComponents(richTextDocument, options)}</>;
+  return (
+    <div className="rich-text-white">
+      {documentToReactComponents(richTextDocument, options)}
+    </div>
+  );
 };
 
 export default RichTextRenderer;
