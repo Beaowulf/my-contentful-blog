@@ -72,7 +72,7 @@ const RichTextRenderer = ({
         </ol>
       ),
       [BLOCKS.LIST_ITEM]: (node, children) => (
-        <li className="my-2 list_inline text-[#F6F6F6]">{children}</li>
+        <li className="list_inline text-[#F6F6F6] my-2">{children}</li>
       ),
       [BLOCKS.HEADING_1]: (node, children) => {
         return (
@@ -87,6 +87,18 @@ const RichTextRenderer = ({
       [BLOCKS.HEADING_3]: (node, children) => {
         return (
           <h3 className="text-xl font-bold my-4 text-[#F6F6F6]">{children}</h3>
+        );
+      },
+      [BLOCKS.HEADING_3]: (node, children) => {
+        return (
+          <h4 className="text-lg font-bold my-4 text-[#F6F6F6]">{children}</h4>
+        );
+      },
+      [BLOCKS.HEADING_3]: (node, children) => {
+        return (
+          <h5 className="text-base font-bold my-4 text-[#F6F6F6]">
+            {children}
+          </h5>
         );
       },
 
