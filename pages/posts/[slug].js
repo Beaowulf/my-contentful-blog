@@ -6,7 +6,6 @@ import RichTextRenderer from "@/components/richTetxtRenderer";
 import { ContentfulLivePreview } from "@contentful/live-preview";
 import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 import ShareButton from "@/components/shareButton";
-import blogPostBG from "@/public/assets/blogPostBG.jpg";
 import DynamicPurpleBar from "@/components/dynamicPurpleBar";
 import clockIcon from "@/public/assets/clockIcon.svg";
 import hashtagIcon from "@/public/assets/hashtagIcon.svg";
@@ -84,6 +83,7 @@ const Post = ({ post, preview }) => {
   const plainText = documentToPlainTextString(paragraph);
   const wordCount = countWords(plainText);
   const minsToRead = Math.ceil(wordCount / 210);
+  const heroImage = livePost.fields.blogImage.fields.file.url;
 
   return (
     <div className="  ">
@@ -135,8 +135,8 @@ const Post = ({ post, preview }) => {
 
               {/* blog Image  */}
               <div className="mt-6">
-                <Image
-                  src={blogPostBG}
+                <img
+                  src={`https://${heroImage}`}
                   alt="blog_Post_Image"
                   className="w-auto max-h-450px rounded-[20px]"
                 />
