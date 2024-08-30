@@ -28,7 +28,7 @@ export async function getStaticPaths() {
       }
       return { params: { slug } };
     })
-    .filter((path) => path.params.slug); // Ensure no undefined slugs are included
+    .filter((path) => path.params.slug);
 
   return { paths, fallback: "blocking" };
 }

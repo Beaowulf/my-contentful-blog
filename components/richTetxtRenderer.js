@@ -11,6 +11,32 @@ const CustomButton = ({ buttonText, url }) => (
   </a>
 );
 
+const sanitizeId = (text) => {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "") // Remove all non-word, non-space, non-hyphen characters
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/-+/g, "-") // Replace multiple hyphens with a single one
+    .trim(); // Trim any leading or trailing hyphens or spaces
+};
+
+const extractTextFromChildren = (children) => {
+  if (!Array.isArray(children)) {
+    children = [children];
+  }
+
+  return children
+    .map((child) => {
+      if (typeof child === "string") {
+        return child;
+      } else if (React.isValidElement(child)) {
+        return extractTextFromChildren(child.props.children);
+      }
+      return "";
+    })
+    .join("");
+};
+
 const RichTextRenderer = ({
   richTextDocument,
   hasTakeaways,
