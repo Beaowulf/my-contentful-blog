@@ -46,3 +46,43 @@
 .pagePaddingLarge {
   @apply px-10;
 }
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
+.list-inside {
+  list-style-position: inherit;
+}
+.styled-table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.styled-table td {
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+@media screen and (max-width: 768px) {
+  .styled-table th,
+  .styled-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
