@@ -20,6 +20,7 @@ const sanitizeId = (text) => {
     .trim(); // Trim any leading or trailing hyphens or spaces
 };
 
+// Ensure this function is defined correctly and before usage
 const extractTextFromChildren = (children) => {
   if (!Array.isArray(children)) {
     children = [children];
@@ -45,6 +46,7 @@ const RichTextRenderer = ({
   const options = {
     renderNode: {
       [BLOCKS.HEADING_4]: (node, children) => {
+        // Make sure extractTextFromChildren is accessible here
         const text = extractTextFromChildren(children);
         const id = sanitizeId(text);
         if (onHeadingRender) onHeadingRender(id, text);
